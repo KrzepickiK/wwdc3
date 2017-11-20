@@ -1,0 +1,170 @@
+.topbar{
+	width:100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 0;
+	.topbar__logo{
+		align-self: flex-start;
+	}
+	.topbar__nav{
+		align-self: flex-end;
+		ul{
+			list-style: none;
+			li{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				a{
+					padding: 0 1em;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: #444;
+				}
+			}
+		}
+	}
+}
+
+.bg-hero{
+	background-image: url(../img/hero-bg.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.hero{
+	background: rgba( 0, 0, 0, 0.7 );
+	min-height: 450px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	color: #ffffff;
+	.hero__content{
+		width: 40rem;
+		text-align: center;
+		margin:5rem 0;
+		h1{
+			font-size: 5rem;
+			margin:0;
+			padding:0;
+		}
+		h2{
+			margin:0;
+			padding:2rem;
+		}
+		button{
+			margin:0 0 3rem 0;
+		}
+	}
+}
+
+.btn-primary{
+	background: #7eb473;
+	color: #ffffff;
+	text-shadow: 0.1em 0.1em 1em #000;
+	border-radius: 2em;
+	border: none;
+	&.big{
+		font-size: 1rem;
+		padding: 1.2em 2em;
+		text-transform: uppercase;
+	}
+}
+
+
+.article-primary{
+	text-align: center;
+	
+	h1{
+		font-size: 3rem;
+		margin:0;
+		padding:1em 0 0 0;
+	}
+	p{
+		font-size: 1.6rem;
+		margin:0;
+		padding:0.1rem;
+	}
+}
+.article-secondary{
+	text-align: left;
+	color:#fff;
+	padding: 2em 0 0 5em;
+	h1{
+		font-size: 3rem;
+		margin:0;
+		padding:1em 0 0 0;
+		span{
+			display: block;
+		}
+	}
+	p{
+		font-size: 1.6rem;
+		margin:0;
+		padding:0.1rem;
+	}
+}
+.article-medium{
+	text-align: center;
+	padding: 3em;
+	color: #fff;
+	img{
+		height: 50px;
+	}
+	h2{
+		
+	}
+	p{
+		font-size: 1rem;
+		color: #3a3a3a;
+	}
+}
+
+.list-primary{
+	list-style: none;
+	li{
+		font-size: 1.5em;
+		line-height: 2;
+		vertical-align: middle;
+		position: relative;
+	}
+	li:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left:-1.5em;
+		top:0.5em;
+		width: 1.2em;
+		height: 1.2em;
+		background-image: url(../img/checkmark.png);
+		background-size: cover;
+	}
+}
+
+
+.bg-art1{
+	background-color: #e9e9e9;
+	background-image: url(../img/gear2.png);
+	background-position: right center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.bg-art2{
+	background-image: url(../img/article-bg-1.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-row{
+	background: #e9e9e9;
+	&.bright{
+		background: #fff;
+	}
+}
+.darker{
+	background: rgba( 0, 0, 0, 0.7 );
+}
