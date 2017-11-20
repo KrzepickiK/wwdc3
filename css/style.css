@@ -880,7 +880,8 @@ template {
   .hero .hero__content {
     width: 40rem;
     text-align: center;
-    margin: 5rem 0; }
+    margin: 5rem 0;
+    overflow: hidden; }
     .hero .hero__content h1 {
       font-size: 5rem;
       margin: 0;
