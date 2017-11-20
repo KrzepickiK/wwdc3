@@ -1,7 +1,4 @@
 :root{font-size: $root_font_size; line-height: $root_line_height;}
-@media only screen and (max-width: 576px){
-	:root{font-size: $root_font_size_small; line-height: $root_line_height;}
-}
 
 .topbar{
 	width:100%;
@@ -52,7 +49,7 @@
 		margin:5rem 0;
 		overflow: hidden;
 		h1{
-			font-size: 5rem;
+			font-size: 4.5rem;
 			margin:0;
 			padding:0;
 		}
