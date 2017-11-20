@@ -1,8 +1,8 @@
 .topbar{
 	width:100%;
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
 	margin: 2rem 0;
 	.topbar__logo{
@@ -15,9 +15,9 @@
 			li{
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
+				justify-content: center;
 				a{
-					padding: 0 1em;
+					padding: 0.2em 1em;
 					text-decoration: none;
 					text-transform: uppercase;
 					color: #444;
@@ -28,8 +28,7 @@
 }
 
 .bg-hero{
-	background-image: url(../img/hero-bg.png);
-	background-position: center;
+	background: url(../img/hero-bg.png) no-repeat center center fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -63,10 +62,16 @@
 
 .btn-primary{
 	background: #7eb473;
-	color: #ffffff;
-	text-shadow: 0.1em 0.1em 1em #000;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0.5em #000;
 	border-radius: 2em;
 	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	&:hover{
+		text-shadow: 0.1em 0.1em 0.2em #000;
+		background: #5fa560;
+	}
 	&.big{
 		font-size: 1rem;
 		padding: 1.2em 2em;
@@ -76,8 +81,7 @@
 
 
 .article-primary{
-	text-align: center;
-	
+	padding:1em;
 	h1{
 		font-size: 3rem;
 		margin:0;
@@ -88,11 +92,14 @@
 		margin:0;
 		padding:0.1rem;
 	}
+	&.article__primary--bright{
+		color:#fff;				
+	}
 }
 .article-secondary{
 	text-align: left;
 	color:#fff;
-	padding: 2em 0 0 5em;
+	padding:1em;
 	h1{
 		font-size: 3rem;
 		margin:0;
@@ -106,7 +113,12 @@
 		margin:0;
 		padding:0.1rem;
 	}
+	
+	&.article__secondary--dark{
+		color:#000;				
+	}
 }
+
 .article-medium{
 	text-align: center;
 	padding: 3em;
@@ -153,10 +165,12 @@
 	background-repeat: no-repeat;
 }
 .bg-art2{
-	background-image: url(../img/article-bg-1.png);
-	background-position: center;
+	background: url(../img/article-bg-1.png) no-repeat center center;
 	background-size: cover;
-	background-repeat: no-repeat;
+}
+.bg-art3{
+	background: url(../img/tablet.png) no-repeat left center;
+	background-size: cover;
 }
 
 .bg-row{
@@ -164,7 +178,54 @@
 	&.bright{
 		background: #fff;
 	}
+	&.grey{
+		background: #d9d9d9;
+	}
+	&.green{
+		background: #5fa560;
+	}
+	&.black{
+		background: #000;
+	}
+}
+
+
+.logos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	.logo{
+		margin: 2em;
+		height: 50px;
+	}
 }
 .darker{
 	background: rgba( 0, 0, 0, 0.7 );
+}
+
+
+
+
+footer{
+	background: #000;
+	color:#fff;
+	.container{background:#111;}
+	.contactus,.latestposts,.facebooknews{
+		padding:1rem;
+		h1{font-size: 2rem;padding: 0.5em 0 0 0;}
+		ul{
+			list-style: none;
+			li{
+				padding: 0.2em 0;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				flex-wrap: nowrap;
+				span{
+					margin:0 0 0 1em;
+				}
+			}
+		}
+	}
 }

@@ -405,10 +405,10 @@ template {
 
 [class*="col-"] {
   width: 100%;
-  padding: 0 10px; }
+  padding: 0; }
 
 .row .row {
-  margin: -0 10px; }
+  margin: 0; }
 
 .row-align-center {
   align-items: center; }
@@ -820,11 +820,23 @@ template {
 @media only screen and (max-width: 1200px) {
   .col-xl-off {
     display: none; } }
+.mb-2em {
+  margin-bottom: 2em; }
+
+.flex-center {
+  justify-content: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
 .topbar {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin: 2rem 0; }
   .topbar .topbar__logo {
@@ -836,16 +848,15 @@ template {
       .topbar .topbar__nav ul li {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; }
+        justify-content: center; }
         .topbar .topbar__nav ul li a {
-          padding: 0 1em;
+          padding: 0.2em 1em;
           text-decoration: none;
           text-transform: uppercase;
           color: #444; }
 
 .bg-hero {
-  background-image: url(../img/hero-bg.png);
-  background-position: center;
+  background: url(../img/hero-bg.png) no-repeat center center fixed;
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -874,17 +885,22 @@ template {
 
 .btn-primary {
   background: #7eb473;
-  color: #ffffff;
-  text-shadow: 0.1em 0.1em 1em #000;
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0.5em #000;
   border-radius: 2em;
-  border: none; }
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .btn-primary:hover {
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    background: #5fa560; }
   .btn-primary.big {
     font-size: 1rem;
     padding: 1.2em 2em;
     text-transform: uppercase; }
 
 .article-primary {
-  text-align: center; }
+  padding: 1em; }
   .article-primary h1 {
     font-size: 3rem;
     margin: 0;
@@ -893,11 +909,13 @@ template {
     font-size: 1.6rem;
     margin: 0;
     padding: 0.1rem; }
+  .article-primary.article__primary--bright {
+    color: #fff; }
 
 .article-secondary {
   text-align: left;
   color: #fff;
-  padding: 2em 0 0 5em; }
+  padding: 1em; }
   .article-secondary h1 {
     font-size: 3rem;
     margin: 0;
@@ -908,6 +926,8 @@ template {
     font-size: 1.6rem;
     margin: 0;
     padding: 0.1rem; }
+  .article-secondary.article__secondary--dark {
+    color: #000; }
 
 .article-medium {
   text-align: center;
@@ -945,15 +965,53 @@ template {
   background-repeat: no-repeat; }
 
 .bg-art2 {
-  background-image: url(../img/article-bg-1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background: url(../img/article-bg-1.png) no-repeat center center;
+  background-size: cover; }
+
+.bg-art3 {
+  background: url(../img/tablet.png) no-repeat left center;
+  background-size: cover; }
 
 .bg-row {
   background: #e9e9e9; }
   .bg-row.bright {
     background: #fff; }
+  .bg-row.grey {
+    background: #d9d9d9; }
+  .bg-row.green {
+    background: #5fa560; }
+  .bg-row.black {
+    background: #000; }
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .logos .logo {
+    margin: 2em;
+    height: 50px; }
 
 .darker {
   background: rgba(0, 0, 0, 0.7); }
+
+footer {
+  background: #000;
+  color: #fff; }
+  footer .container {
+    background: #111; }
+  footer .contactus, footer .latestposts, footer .facebooknews {
+    padding: 1rem; }
+    footer .contactus h1, footer .latestposts h1, footer .facebooknews h1 {
+      font-size: 2rem;
+      padding: 0.5em 0 0 0; }
+    footer .contactus ul, footer .latestposts ul, footer .facebooknews ul {
+      list-style: none; }
+      footer .contactus ul li, footer .latestposts ul li, footer .facebooknews ul li {
+        padding: 0.2em 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap; }
+        footer .contactus ul li span, footer .latestposts ul li span, footer .facebooknews ul li span {
+          margin: 0 0 0 1em; }
